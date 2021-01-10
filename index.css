@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:#f1f5f8;
+    color:#102a42;
+}
+
+header{
+    padding-top:5rem;
+}
+header form{
+    width:85vw;
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+}
+header form h2{
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+    margin-bottom:0.75rem;
+}
+header form input{
+    width:100%;
+    border:transparent;
+    font-size:1rem;
+    padding:0.5rem 1rem;
+    border-radius:5px;
+}
+header form input::placeholder{
+    text-transform: capitalize;
+}
+
+.section{
+    padding-top:5rem;
+    position: relative;
+}
+.section-center{
+    width:85vw;
+    max-width: 1170px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 4rem;
+}
+.cocktail{
+    position: relative;
+    transition: all 0.3s linear;
+}
+.cocktail img{
+    width:100%;
+    height:268px;
+    border:10px solid #fff;
+    object-fit: cover;
+    display:block;
+    border-radius: 0.5rem;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:  filter 0.3s linear;
+}
+.cocktail h3{
+    position: absolute;
+    bottom:-1rem;
+    right:-1rem;
+    font-size: 2rem;
+    padding:1rem 1.5rem;
+    background-color: #222;
+    border-radius: 0.5rem;
+    color:white;
+}
+.cocktail:hover{
+    transform:scale(1.005);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.cocktail:hover img{
+    filter:grayscale(50%) blur(2px);
+}
+.loading{
+    z-index:2;
+    min-height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    padding-top:5rem;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.hide-loading{
+    display:none;
+}
